@@ -1,0 +1,33 @@
+.logoContainer {
+    display: flex;
+}
+
+.logoContainer img {
+    width: 30%;
+    float: left;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+    .logo-img {
+      animation: logo-img-spin infinite 10s linear;
+    }
+  }
+
+
+@keyframes logo-img-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+.nav-buttons {
+    list-style: none;
+    display: flex;
+}
+
+

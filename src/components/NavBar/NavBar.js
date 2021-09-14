@@ -5,6 +5,13 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import logo from '../../assets/libro.png';
+import navLogo from '../../assets/librin.png';
+
+import './NavBar.css';
+import { LibraryAddOutlined } from '@material-ui/icons';
+
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -23,15 +30,19 @@ const useStyles = makeStyles((theme) => ({
   
     return (
       <div className={classes.root}>
-        <AppBar position="static">
+        <AppBar position="static" className="nav-main"> 
           <Toolbar>
-            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" className={classes.title}>
-              News
-            </Typography>
-            <Button color="inherit">Login</Button>
+          <div className="logoContainer">
+          <img src={navLogo} className="logo-img" />
+          </div>
+            <Typography variant="h6" className={classes.title}></Typography>
+            <ul className="nav-buttons">
+            <li><Button color="inherit">Tienda</Button></li>
+            <li><Button color="inherit">Catalogo</Button></li>
+            <li><Button color="inherit">Contacto</Button></li>
+            <li><Button color="default">Inicia Sesion</Button></li>
+            <li><Button color="default">Registro</Button></li>
+            </ul>
           </Toolbar>
         </AppBar>
       </div>
