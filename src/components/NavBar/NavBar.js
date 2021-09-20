@@ -1,3 +1,8 @@
+import logo from '../../assets/libro.png';
+import './NavBar.css';
+import CartIcon from '../NavBar/CartWidget';
+
+//external components
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -5,12 +10,8 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import logo from '../../assets/libro.png';
 import navLogo from '../../assets/librin.png';
-
-import './NavBar.css';
 import { LibraryAddOutlined } from '@material-ui/icons';
-
 
 
 const useStyles = makeStyles((theme) => ({
@@ -32,17 +33,18 @@ const useStyles = makeStyles((theme) => ({
       <div className={classes.root}>
         <AppBar position="static" className="nav-main"> 
           <Toolbar>
-          <div className="logoContainer">
-          <img src={navLogo} className="logo-img" />
-          </div>
-            <Typography variant="h6" className={classes.title}></Typography>
-            <ul className="nav-buttons">
-            <li><Button color="inherit">Tienda</Button></li>
-            <li><Button color="inherit">Catalogo</Button></li>
-            <li><Button color="inherit">Contacto</Button></li>
-            <li><Button color="default">Inicia Sesion</Button></li>
-            <li><Button color="default">Registro</Button></li>
-            </ul>
+            <div className="logoContainer">
+              <img src={navLogo} className="logo-img" />
+            </div>
+              <Typography variant="h6" className={classes.title}></Typography>
+                <ul className="nav-buttons">
+                  <li><Button color="inherit">Tienda</Button></li>
+                  <li><Button color="inherit">Catalogo</Button></li>
+                  <li><Button color="inherit">Contacto</Button></li>
+                  <li><Button color="default">Inicia Sesion</Button></li>
+                  <li><Button color="default">Registro</Button></li>
+                </ul>
+              <CartIcon/>
           </Toolbar>
         </AppBar>
       </div>
