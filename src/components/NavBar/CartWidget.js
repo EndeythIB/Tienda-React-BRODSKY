@@ -7,8 +7,7 @@ const CartIcon = () => {
     return(
         <div className= "cart-button">
             <button>
-                  <FontAwesomeIcon icon={faShoppingCart} size="lg" />
-                  <p></p>
+                    <FontAwesomeIcon icon={faShoppingCart} size="lg" />                    
             </button>
         </div>
     )
