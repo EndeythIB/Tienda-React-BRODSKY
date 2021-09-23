@@ -5,10 +5,8 @@ import "../App.css";
 const ScrollWidget = () => {
     return(
         <div className= "down-button">
-            <a href="#catalog">
-                    
-                    <FontAwesomeIcon icon={faArrowDown} size="lg" />
-                   
+            <a href="#catalog">                    
+                    <FontAwesomeIcon icon={faArrowDown} size="lg" />                   
             </a>
         </div>
     )

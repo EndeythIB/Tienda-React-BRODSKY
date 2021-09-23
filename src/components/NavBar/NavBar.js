@@ -1,6 +1,6 @@
 import logo from '../../assets/libro.png';
 import './NavBar.css';
-import CartIcon from '../NavBar/CartWidget';
+import CartWidget from '../NavBar/CartWidget';
 
 //external components
 import { makeStyles } from '@material-ui/core/styles';
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
   
-  export default function ButtonAppBar() {
+  export default function NavBar() {
     const classes = useStyles();
   
     return (
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
                   <li><Button color="default">Inicia Sesion</Button></li>
                   <li><Button color="default">Registro</Button></li>
                 </ul>
-              <CartIcon/>
+              <CartWidget/>
           </Toolbar>
         </AppBar>
       </div>
