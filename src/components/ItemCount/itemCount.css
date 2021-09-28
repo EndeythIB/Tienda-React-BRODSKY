@@ -1,0 +1,16 @@
+.counter-text {
+    padding: 10px;
+  }
+  
+  .flex-container {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    max-width: 200px;
+  }
+  
+  .flex-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }

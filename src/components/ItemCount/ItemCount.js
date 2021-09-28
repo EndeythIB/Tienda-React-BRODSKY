@@ -1,35 +1,39 @@
-import React, {useState} from "react"
+import React, {useState} from "react";
+import "./ItemCount.css";
 
+import Button from "@material-ui/core/Button";
 
-export default function ItemCount(props) {
-    const [item, setItem] = useState(1)
-    const [stock, setStock] = useState(10)
-    const [disablePlusButton, setDisablePlusButton] = useState(false)
-    const [disableSubstractButton, setDisableSubstractButton] = useState(false)
+const ItemCount = ({ stock, initial, onAdd }) => {
 
-    const sumar = () => {
-        if(item < stock){
-            setItem(item + 1)
-        }else{
-            setDisablePlusButton(true)
+    const [counter, setCounter] = useState(initial);
+
+    const addOne = () => {
+        if (counter < stock) {
+            setCounter(counter + 1);
         }
+    };
+
+    const removeOne = () => {
+        if (counter > initial) {
+            setCounter(counter - 1);
+        }
+    };
+
+    return (
         
-    }
-    const restar = () => {
-        if(item == 1) {
-            setDisableSubstractButton(true)
-        }else if(item >= 2){
-            setDisableSubstractButton()
-            setItem(item - 1)
-        }
-    }
+        <div className="flex-container">
 
+        <div className="flex-item">
+            <Button onClick= {removeOne} disabled= {counter <= initial} variant="outlined"> - </Button>
 
-    return ( 
-        <div className="item-count">
-            <button disabled={disableSubstractButton} onClick={restar}>-</button>
-                {item}
-            <button disabled={disablePlusButton} onClick={sumar}>+</button>
+            <span className="counter-text"> {counter} </span>
+
+            <Button onClick= {addOne} disabled= {counter >= stock} variant="outlined"> + </Button>
         </div>
+
+        </div>
+
     )
 }
+
+export default ItemCount

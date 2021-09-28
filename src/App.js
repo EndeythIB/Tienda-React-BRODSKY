@@ -1,9 +1,10 @@
 import logo from './assets/libro.png';
-// import NavLogo from '.assets/librin.png';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemList/ItemListContainer';
+import {ItemListContainer} from "./components/ItemList/ItemListContainer"
 import ScrollWidget from './components/ScrollWidget';
+
+
 function App() {
   return (
     <div className="App">

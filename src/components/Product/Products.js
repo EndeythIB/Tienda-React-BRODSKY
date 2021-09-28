@@ -11,9 +11,9 @@ const Product = (props) => {
                 <img src= {productImg} alt="imagen"/>
             </div>
                 <h3>{props.title}</h3>
-                <p>{props.price}</p>
-                <ItemCount />
-                <Button>Comprar</Button>
+                <p>${props.price}</p>
+                <ItemCount stock={10} initial={1} />
+                <Button>Agregar al Carrito</Button>
         </div>
     )
 }
