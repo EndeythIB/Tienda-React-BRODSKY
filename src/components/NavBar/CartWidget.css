@@ -1,5 +1,6 @@
 .cart-button {
     display: flex;
+    padding-bottom: 7px;
 }
 
 .cart-button button {

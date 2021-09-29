@@ -28,5 +28,6 @@
 .nav-buttons {
   list-style: none;
   display: flex;
+  margin: auto;
 }
 
