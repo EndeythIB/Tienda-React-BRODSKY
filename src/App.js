@@ -2,6 +2,7 @@ import logo from './assets/libro.png';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import {ItemListContainer} from "./components/ItemList/ItemListContainer"
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import ScrollWidget from './components/ScrollWidget';
 
 
@@ -20,6 +21,7 @@ function App() {
 
       <div class="div-catalog" id="catalog">
         <ItemListContainer greeting={"BIENVENIDO"}/>
+        <ItemDetailContainer/>
       </div>
 
 

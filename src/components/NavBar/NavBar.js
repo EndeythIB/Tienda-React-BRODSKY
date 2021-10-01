@@ -1,4 +1,3 @@
-import logo from '../../assets/libro.png';
 import './NavBar.css';
 import CartWidget from '../NavBar/CartWidget';
 
@@ -8,10 +7,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import navLogo from '../../assets/librin.png';
-import { LibraryAddOutlined } from '@material-ui/icons';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -34,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
         <AppBar position="static" className="nav-main"> 
           <Toolbar>
             <div className="logoContainer">
-              <img src={navLogo} className="logo-img" />
+              <img src={navLogo} alt="" className="logo-img" />
             </div>
               <Typography variant="h6" className={classes.title}></Typography>
                 <ul className="nav-buttons">

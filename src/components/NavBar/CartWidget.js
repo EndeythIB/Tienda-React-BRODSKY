@@ -2,13 +2,13 @@ import './CartWidget.css';
 
 //external components
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
 const CartWidget = () => {
     return(
         <div className= "cart-button">
             <button>
-                    <FontAwesomeIcon icon={faShoppingCart} size="md" />                    
+                    <FontAwesomeIcon icon={faShoppingCart} size="sm" />                    
             </button>
         </div>
     )
