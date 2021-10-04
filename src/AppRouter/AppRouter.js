@@ -12,7 +12,6 @@ export default function AppRouter() {
             <NavBar/>
             <Switch>
                 <Route path="/contact" component={ContactPage}/>
-                <Route path ="/detail" component={ItemDetailContainer}/>
                 <Route path="/category/:catId" component={HomePage}/>
                 <Route path="/detail/:idItem" component={ItemDetailContainer}/>
                 <Route exact path="/" component={HomePage}/>

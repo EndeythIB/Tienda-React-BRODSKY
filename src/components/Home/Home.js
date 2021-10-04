@@ -13,7 +13,8 @@ export default function Home() {
                 <br></br>
                 <h1>📖LIBRITOS📖</h1>
                 <h5>
-                    REVISA NUESTRO <span>CATÁLOGO</span>
+                <br></br>
+                    REVISA AQUI DEBAJO NUESTRO <span style={{ textDecoration: 'underline'}}>CATÁLOGO COMPLETO</span> 
                 </h5>
                 <div className="down-button">
                     <ScrollWidget/>
