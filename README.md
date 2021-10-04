@@ -1,7 +1,3 @@
-[![LinkedIn][linkedin-shield]][linkedin.com/in/isaac-brodsky-224985116]
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -70,14 +66,12 @@ Primero que nada debes forkear y clonar el repositorio a tu pc!
 <!-- CONTACTO -->
 ## Contacto
 
-Creador -Isaac Brodsky - isaacb-534@hotmail.com - https://github.com/EndeythIB
+Creador -Isaac Brodsky - isaacb-534@hotmail.com - https://github.com/EndeythIB - linkedin.com/in/isaac-brodsky-224985116 -
 
 Project Link: [https://github.com/EndeythIB/Tienda-React-BRODSKY]
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- IMAGENES Y MARKDOWNS -->
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: linkedin.com/in/isaac-brodsky-224985116
 [product-screenshot]: ./src/assets/InicioLibrito.gif
 [product-USE]: ./src/assets/UsoLibrito.gif
