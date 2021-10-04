@@ -1,0 +1,123 @@
+  .content {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+  }
+  
+  .logoC {
+    text-align: center;
+    font-size: 3em;
+    padding-bottom: 1em;
+    text-decoration: underline;
+  }
+  
+  .contact-form {
+    background-color: #5261b6;
+  }
+  
+  .contact-form p {
+    margin: 1em;
+  }
+  
+  .contact-info {
+    background-color: #8e93b4;
+  }
+  
+  .contact-info h4 {
+    text-decoration: underline;
+  }
+  
+  .contact-info li {
+    margin: 1em;
+    list-style: none;
+  }
+
+  .contact-wrapper {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+  }
+  
+/* .contact-wrapper, .contact-wrap {
+    -webkit-box-shadow: 0 0 20 0 rgba(134, 28, 28, 0.3);
+            box-shadow: 0 0 20 0 rgba(134, 28, 28, 0.3);
+    border: rgb(77, 76, 76) solid;
+  } */
+  
+  .contact-wrapper, .contact-wrap > * {
+    padding: 1em;
+  }
+
+  .contact-wrapper > * {
+    padding: 2em;
+}
+
+.contact-info h4, .contact-info ul, .contact-info p {
+    padding: 1em;
+    text-align: left;
+}
+  
+  .contact-form form {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  
+  .contact-form form .block {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+  }
+  
+  .contact-form form button {
+    width: 100%;
+    padding: .7em;
+    /* border: none; */
+    border-radius: 50px;
+    border-color: rgba(77, 76, 76, 0.603);
+    background-color: #98c3fa;
+    /* border-bottom: 1px solid #d63031; */
+    outline: none;
+    text-transform: uppercase;
+    padding: 1em;
+  }
+  
+  .contact-form form button:hover, .contact-form form button:focus {
+    background-color: #4f9bff;
+    color: #fff;
+    -webkit-transition: background-color 1s ease-out;
+    transition: background-color 1s ease-out;
+  }
+  
+  .contact-form form input {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background-color: #dcdde1;
+    outline: none;
+  }
+  
+  .contact-form form textarea {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background-color: #dcdde1;
+    outline: none;
+  }
+
+  .contact-form p textarea {
+      width: 100%;
+      height: 170px;
+  }
+  
+  .contact-info h4,
+  .contact-info ul,
+  .contact-info p {
+    text-align: center;
+    margin: 0 0 0 0;
+  }
+  
+  .contact-info ul {
+    padding: 0;
+  }

@@ -6,8 +6,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import Button from 'react-bootstrap/Button';
 import navLogo from '../../assets/librin.png';
+import { Link } from 'react-router-dom';
+import Dropdown from 'react-bootstrap/Dropdown'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -30,15 +32,23 @@ const useStyles = makeStyles((theme) => ({
         <AppBar position="static" className="nav-main"> 
           <Toolbar>
             <div className="logoContainer">
-              <img src={navLogo} alt="" className="logo-img" />
+            <Link to="/" style={{ textDecoration: 'none', color: 'white' }}><img src={navLogo} alt="" className="logo-img" /></Link>
             </div>
               <Typography variant="h6" className={classes.title}></Typography>
                 <ul className="nav-buttons">
-                  <li><Button color="inherit">Tienda</Button></li>
-                  <li><Button color="inherit">Catalogo</Button></li>
-                  <li><Button color="inherit">Contacto</Button></li>
-                  <li><Button color="default">Inicia Sesion</Button></li>
-                  <li><Button color="default">Registro</Button></li>
+                  <Link to="/" style={{ textDecoration: 'none', color: 'white' }}><li><Button variant="link" className="btn-nav">INICIO</Button></li></Link>
+                  <li><Dropdown>
+                    <Dropdown.Toggle className="btn-nav" variant="link" id="dropdown-basic">
+                      CATALOGO
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu variant="dark">
+                      <Dropdown.Item href="#/action-1">Terror</Dropdown.Item>
+                      <Dropdown.Item href="#/action-2">Comedia</Dropdown.Item>
+                      <Dropdown.Item href="#/action-3">Drama</Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown></li>                  
+                  <Link to="/contact" style={{ textDecoration: 'none', color: 'white' }}><li><Button className="btn-nav" variant="link">CONTACTO</Button></li></Link>
                 </ul>
               <CartWidget/>
           </Toolbar>

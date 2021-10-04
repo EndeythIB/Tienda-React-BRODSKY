@@ -1,7 +1,7 @@
 import React, {useState} from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from "react-bootstrap/Button";
 import "./ItemCount.css";
-
-import Button from "@material-ui/core/Button";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
 
@@ -24,11 +24,11 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         <div className="flex-container">
 
         <div className="flex-item">
-            <Button onClick= {removeOne} disabled= {counter <= initial} variant="outlined"> - </Button>
+            <Button onClick= {removeOne} disabled= {counter <= initial} variant="outline-danger"> - </Button>
 
             <span className="counter-text"> {counter} </span>
 
-            <Button onClick= {addOne} disabled= {counter >= stock} variant="outlined"> + </Button>
+            <Button onClick= {addOne} disabled= {counter >= stock} variant="outline-danger"> + </Button>
         </div>
 
         </div>

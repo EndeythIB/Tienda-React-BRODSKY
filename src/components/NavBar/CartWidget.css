@@ -1,4 +1,28 @@
-.cart-button {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.cart-button button {
+    list-style: none;
+    display: flex;
+    margin: auto;
+  }
+
+.cart-button .btn-nav {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .btn-nav:focus,.btn-nav:active {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .bi-cart {
+      margin-right: 10px;
+  }
+
+/* .cart-button {
     display: flex;
     padding-bottom: 7px;
 }
@@ -12,4 +36,4 @@
 .cart-button button:hover {
     background-color: rgba(31, 46, 129, 0.322);
     cursor: crosshair;
-}
+} */
