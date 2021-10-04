@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
   
-  export default function NavBar() {
+  export default function NavBar({category}) {
     const classes = useStyles();
   
     return (
@@ -43,9 +43,10 @@ const useStyles = makeStyles((theme) => ({
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu variant="dark">
-                      <Dropdown.Item href="#/action-1">Terror</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Comedia</Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">Drama</Dropdown.Item>
+                      <Link to={`/category/terror`} style={{ textDecoration: 'none', color: 'white' }}><Dropdown.Item href="#/action-1">Terror</Dropdown.Item></Link>
+                      <Link to={`/category/comedia`} style={{ textDecoration: 'none', color: 'white' }}><Dropdown.Item href="#/action-2">Comedia</Dropdown.Item></Link>
+                      <Link to={`/category/drama`} style={{ textDecoration: 'none', color: 'white' }}><Dropdown.Item href="#/action-3">Drama</Dropdown.Item></Link>
+                      <Link to={`/category/suspenso`} style={{ textDecoration: 'none', color: 'white' }}><Dropdown.Item href="#/action-3">Suspenso</Dropdown.Item></Link>
                     </Dropdown.Menu>
                   </Dropdown></li>                  
                   <Link to="/contact" style={{ textDecoration: 'none', color: 'white' }}><li><Button className="btn-nav" variant="link">CONTACTO</Button></li></Link>

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import './Item.css';
 
 
-export const Item = ({item}) => {
+export const Item = ({item, props}) => {
     return(
                 <div>
                     <Card style={{ width: '18rem' }}>
@@ -19,7 +19,7 @@ export const Item = ({item}) => {
                         {/* <ItemCount stock={10} initial={1} /> */}
                         <br></br>
                         <Button className="item-btn" variant="outline-dark">Comprar</Button>
-                        <Link><Button className="item-btn" variant="outline-dark">Ver</Button></Link>
+                        <Link to={`/detail/${item.id}`}><Button className="item-btn" variant="outline-dark">Ver</Button></Link>
 
                     </Card.Body>
                     </Card>

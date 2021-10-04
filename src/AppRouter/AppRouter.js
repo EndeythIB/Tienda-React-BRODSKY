@@ -1,8 +1,7 @@
 import React from "react";
-import {Route, Switch, BrowserRouter} from "react-router-dom";
+import {Route, Switch, BrowserRouter, Redirect} from "react-router-dom";
 import HomePage from "../Pages/HomePage";
 import ContactPage from "../Pages/ContactPage"
-import NotFound from "../Pages/NotFound";
 import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer";
 import NavBar from "../components/NavBar/NavBar";
 
@@ -14,8 +13,10 @@ export default function AppRouter() {
             <Switch>
                 <Route path="/contact" component={ContactPage}/>
                 <Route path ="/detail" component={ItemDetailContainer}/>
+                <Route path="/category/:catId" component={HomePage}/>
+                <Route path="/detail/:idItem" component={ItemDetailContainer}/>
                 <Route exact path="/" component={HomePage}/>
-                <Route path="*" component={NotFound}/>
+                <Route path="*"><Redirect to="/"/></Route>
             </Switch>
         </BrowserRouter>
     )
