@@ -1,4 +1,4 @@
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![LinkedIn][linkedin-shield]][linkedin.com/in/isaac-brodsky-224985116]
 
 
 
@@ -24,6 +24,14 @@
 [![Product Name Screen Shot][product-screenshot]](https://ibb.co/Gt7yYYb)
 
 Como habiamos comentado anteriormente se trata de una libreria virtual, los usuarios pueden buscar y comprar los libros de sus autores favoritos con solo unos cuantos clicks
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- APLICACION USO -->
+## APLICACION EN USO
+
+[![Product Name Screen Shot][product-USE]](https://ibb.co/Gt7yYYb)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -72,3 +80,4 @@ Project Link: [https://github.com/EndeythIB/Tienda-React-BRODSKY]
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: linkedin.com/in/isaac-brodsky-224985116
 [product-screenshot]: ./src/assets/InicioLibrito.gif
+[product-USE]: ./src/assets/UsoLibrito.gif
