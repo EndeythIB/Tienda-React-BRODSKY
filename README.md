@@ -21,7 +21,7 @@
 <!-- SOBRE EL PROYECTO -->
 ## Sobre el proyecto
 
-[product-screenshot]](https://ibb.co/Gt7yYYb)
+[![Product Name Screen Shot][product-screenshot]](https://ibb.co/Gt7yYYb)
 
 Como habiamos comentado anteriormente se trata de una libreria virtual, los usuarios pueden buscar y comprar los libros de sus autores favoritos con solo unos cuantos clicks
 
