@@ -66,7 +66,7 @@ Primero que nada debes forkear y clonar el repositorio a tu pc!
 <!-- CONTACTO -->
 ## Contacto
 
-Creador -Isaac Brodsky - isaacb-534@hotmail.com - https://github.com/EndeythIB - linkedin.com/in/isaac-brodsky-224985116 -
+Creador -Isaac Brodsky - https://github.com/EndeythIB - https://www.linkedin.com/in/isaac-brodsky-224985116/ -
 
 Project Link: [https://github.com/EndeythIB/Tienda-React-BRODSKY]
 
