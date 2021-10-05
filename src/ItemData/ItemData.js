@@ -6,6 +6,7 @@ export const DataItem = [
         price: 2300,
         img: "https://img.huffingtonpost.com/asset/55bb82dd1400002f002e18bc.jpeg?cache=zflffcpwry&ops=crop_0_27_2121_1377,scalefit_630_noupscale",
         category: "terror",
+        stock: 9,
     },
     {
         id: "2",
@@ -13,7 +14,8 @@ export const DataItem = [
         description: "Logan sufre porque perdió la batalla definitiva con Mirtha",
         price: 5400,
         img: "https://i.pinimg.com/originals/a7/37/df/a737dfaf12129b5dfe3d455dc0258cf2.jpg",
-        category: "comedia",   
+        category: "comedia",
+        stock: 9, 
     },
     {
         id: "3",
@@ -21,7 +23,8 @@ export const DataItem = [
         description: "Horrocruxes, un pasatiempo",
         price: 4300,
         img: "https://i2.wp.com/hipertextual.com/wp-content/uploads/2020/03/hipertextual-2020604748.jpg?fit=1200%2C800&ssl=1",
-        category: "drama",    
+        category: "drama",
+        stock: 9,    
     },
     {
         id: "4",
@@ -29,7 +32,8 @@ export const DataItem = [
         description: "En ese momento Cell, sintio el verdadero temor",
         price: 6800,
         img: "https://i1.wp.com/culturageek.com.ar/wp-content/uploads/2019/02/Wolverine-Daniel-Radcliffe-1-e1549907055722.png?fit=667%2C390",
-        category: "suspenso", 
+        category: "suspenso",
+        stock: 9, 
     },
     {
         id: "5",
@@ -37,7 +41,8 @@ export const DataItem = [
         description: "Harry pelea con Wolverine por una milanesa",
         price: 2300,
         img: "https://img.huffingtonpost.com/asset/55bb82dd1400002f002e18bc.jpeg?cache=zflffcpwry&ops=crop_0_27_2121_1377,scalefit_630_noupscale",
-        category: "terror",    
+        category: "terror",
+        stock: 4,    
     },
     {
         id: "6",
@@ -45,7 +50,8 @@ export const DataItem = [
         description: "Logan sufre porque perdió la batalla definitiva con Mirtha",
         price: 5400,
         img: "https://i.pinimg.com/originals/a7/37/df/a737dfaf12129b5dfe3d455dc0258cf2.jpg",
-        category: "comedia",     
+        category: "comedia",
+        stock: 4,   
     },
     {
         id: "7",
@@ -53,7 +59,8 @@ export const DataItem = [
         description: "Horrocruxes, un pasatiempo",
         price: 4300,
         img: "https://i2.wp.com/hipertextual.com/wp-content/uploads/2020/03/hipertextual-2020604748.jpg?fit=1200%2C800&ssl=1",
-        category: "drama",      
+        category: "drama",
+        stock: 4,      
     },
     {
         id: "8",
@@ -61,7 +68,8 @@ export const DataItem = [
         description: "En ese momento Cell, sintio el verdadero temor",
         price: 6800,
         img: "https://i1.wp.com/culturageek.com.ar/wp-content/uploads/2019/02/Wolverine-Daniel-Radcliffe-1-e1549907055722.png?fit=667%2C390",
-        category: "suspenso",   
+        category: "suspenso",
+        stock: 4,   
     },
     {
         id: "9",
@@ -69,7 +77,8 @@ export const DataItem = [
         description: "Harry pelea con Wolverine por una milanesa",
         price: 2300,
         img: "https://img.huffingtonpost.com/asset/55bb82dd1400002f002e18bc.jpeg?cache=zflffcpwry&ops=crop_0_27_2121_1377,scalefit_630_noupscale",
-        category: "terror",     
+        category: "terror",
+        stock: 10,     
     },
     {
         id: "10",
@@ -77,7 +86,8 @@ export const DataItem = [
         description: "Logan sufre porque perdió la batalla definitiva con Mirtha",
         price: 5400,
         img: "https://i.pinimg.com/originals/a7/37/df/a737dfaf12129b5dfe3d455dc0258cf2.jpg",
-        category: "comedia",    
+        category: "comedia",
+        stock: 10,    
     },
     {
         id: "11",
@@ -85,7 +95,8 @@ export const DataItem = [
         description: "Horrocruxes, un pasatiempo",
         price: 4300,
         img: "https://i2.wp.com/hipertextual.com/wp-content/uploads/2020/03/hipertextual-2020604748.jpg?fit=1200%2C800&ssl=1",
-        category: "drama",    
+        category: "drama",
+        stock: 10,    
     },
     {
         id: "12",
@@ -93,7 +104,8 @@ export const DataItem = [
         description: "En ese momento Cell, sintio el verdadero temor",
         price: 6800,
         img: "https://i1.wp.com/culturageek.com.ar/wp-content/uploads/2019/02/Wolverine-Daniel-Radcliffe-1-e1549907055722.png?fit=667%2C390",
-        category: "suspenso",    
+        category: "suspenso",
+        stock: 10,    
     },
     {
         id: "13",
@@ -101,7 +113,8 @@ export const DataItem = [
         description: "Harry pelea con Wolverine por una milanesa",
         price: 2300,
         img: "https://img.huffingtonpost.com/asset/55bb82dd1400002f002e18bc.jpeg?cache=zflffcpwry&ops=crop_0_27_2121_1377,scalefit_630_noupscale",
-        category: "terror",     
+        category: "terror",
+        stock: 1,     
     },
     {
         id: "14",
@@ -109,7 +122,8 @@ export const DataItem = [
         description: "Logan sufre porque perdió la batalla definitiva con Mirtha",
         price: 5400,
         img: "https://i.pinimg.com/originals/a7/37/df/a737dfaf12129b5dfe3d455dc0258cf2.jpg",
-        category: "comedia",    
+        category: "comedia",
+        stock: 1,    
     },
     {
         id: "15",
@@ -117,7 +131,8 @@ export const DataItem = [
         description: "Horrocruxes, un pasatiempo",
         price: 4300,
         img: "https://i2.wp.com/hipertextual.com/wp-content/uploads/2020/03/hipertextual-2020604748.jpg?fit=1200%2C800&ssl=1",
-        category: "drama",    
+        category: "drama",
+        stock: 1,    
     },
     {
         id: "16",
@@ -125,7 +140,8 @@ export const DataItem = [
         description: "En ese momento Cell, sintio el verdadero temor",
         price: 6800,
         img: "https://i1.wp.com/culturageek.com.ar/wp-content/uploads/2019/02/Wolverine-Daniel-Radcliffe-1-e1549907055722.png?fit=667%2C390",
-        category: "suspenso",    
+        category: "suspenso",
+        stock: 0,    
     },
     
 ]

@@ -43,7 +43,7 @@ Como habiamos comentado anteriormente se trata de una libreria virtual, los usua
 
 
 <!-- EMPEZANDO -->
-## Emepezando
+## Empezando
 
 Primero que nada debes forkear y clonar el repositorio a tu pc!
 

@@ -24,7 +24,6 @@ export const ItemListContainer = () => {
     });
   }, [catId]);
 
-  console.log(catId)
 
   const categories = [
     { id: 'asfadd', address: '/', text: 'TODOS LOS PRODUCTOS' },
