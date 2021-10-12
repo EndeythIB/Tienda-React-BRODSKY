@@ -47,7 +47,11 @@ export default function ItemDetail(props) {
                     <Button onClick={addCarrito} variant="outline-danger">Agregar al carrito</Button>
                 </div>:null}
                 {showCart?<div className="d-grid gap-2">
-                    <Link to="/cart"><Button variant="outline-danger">Finalizar Compra</Button></Link>
+                    <p style={{ color: "red" }}>Gracias por su compra, vuelvas prontos!</p>
+                </div>:null}
+                {showCart?<div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }} className="d-grid gap-2">
+                    <Link to="/"><Button variant="outline-danger">Volver a Inicio</Button></Link>
+                    <Link to="/cart"><Button variant="outline-danger">Ir al Carrito 🛒</Button></Link>
                 </div>:null}
                 
 
