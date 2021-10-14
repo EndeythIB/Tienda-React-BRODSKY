@@ -1,17 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import ItemCount from "../ItemCount/ItemCount";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './ItemDetail.css';
+import { CartContext } from "../../Context/CartContext";
+
 
 export default function ItemDetail(props) {
     const [counter, setCounter] = useState(0);
     const stock = (props.data[0]?.stock);
-    const [itemCarrito, setItemCarrito] = useState();
     const [show, setShow] = useState(true)
     const [showCart, setShowCart] = useState(false)
+    const {cart, addItem} = useContext(CartContext);
 
     const addOne = () => {counter < stock && setCounter(counter + 1)}
 
@@ -21,6 +22,10 @@ export default function ItemDetail(props) {
         if (counter >= 1) {
             setShow(false)
             setShowCart(true)
+            const itemCarrito = props.data[0]
+
+            addItem(itemCarrito, counter)
+            console.log(itemCarrito);
 
         }else {
             alert("debes agregar al menos 1 item");

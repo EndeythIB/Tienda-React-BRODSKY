@@ -5,11 +5,14 @@ import ContactPage from "../Pages/ContactPage"
 import CartPage from "../Pages/CartPage";
 import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer";
 import NavBar from "../components/NavBar/NavBar";
+import Cart from "../components/Cart/Cart";
+
 
 
 export default function AppRouter() {
     return (
         <BrowserRouter>
+            <Cart/>
             <NavBar/>
             <Switch>
                 <Route exact path="/contact" component={ContactPage}/>
