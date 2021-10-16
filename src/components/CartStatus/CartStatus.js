@@ -5,7 +5,6 @@ import CartItem from "../CartItem/CartItem";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from "react-bootstrap/Button";
 import './CartStatus.css'
-import { faAlignJustify } from "@fortawesome/free-solid-svg-icons";
 
 export default function CartStatus() {
     const {cart, clear, precioTotalCarrito, cantidadTotalCarrito, deleteItem} = useContext(CartContext);
