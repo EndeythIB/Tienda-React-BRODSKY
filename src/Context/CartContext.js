@@ -26,8 +26,8 @@ export const CartProvider = (props) => {
   const deleteItem = (id) => {
   //      deleteItem.props.data[0]
   //      deleteItem.props.data[0].id
-      cart.filter(el => el.id !== id);
-      setCart([...cart]);
+      const remItem= cart.filter(el => el.id !== id);
+      setCart([...remItem]);
   }
 
   // const deleteItem = (item) => {

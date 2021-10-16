@@ -1,4 +1,5 @@
 import React, {useContext} from "react";
+import { Link } from "react-router-dom";
 import {CartContext} from "../../Context/CartContext";
 import CartItem from "../CartItem/CartItem";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,15 +8,21 @@ import './CartStatus.css'
 import { faAlignJustify } from "@fortawesome/free-solid-svg-icons";
 
 export default function CartStatus() {
-    const {cart, clear, precioTotalCarrito, cantidadTotalCarrito} = useContext(CartContext);
+    const {cart, clear, precioTotalCarrito, cantidadTotalCarrito, deleteItem} = useContext(CartContext);
     const cartLenght = cart?.length
     
 
     if (cartLenght === 0) {
         return(
             <div>
-                <p>Carrito vacio</p>
-                {precioTotalCarrito()}
+                <div className="empty">
+                    <h2>¡Todavía no agrego nada en su carrito!</h2>
+                    <br></br>
+                    <h4>(vaya a inicio para empezar a comprar)</h4>
+                    <br></br>
+                    <Link to="/"><Button>Ir a COMPRAR</Button></Link>
+
+                </div>
             </div>
         )            
     }else {

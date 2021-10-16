@@ -23,7 +23,7 @@ export default function CartItem(props) {
                     </Card.Text>
                 </Card.Body>
                 <Card.Body>
-                    <Button onClick={deleteItem} style={{marginTop: "30px"}} variant="primary">X</Button>
+                    <Button onClick={() => deleteItem(props.item.id)} style={{marginTop: "30px"}} variant="primary">X</Button>
                 </Card.Body>
             </Card>
 
