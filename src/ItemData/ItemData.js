@@ -10,7 +10,7 @@ export const DataItem = [
     },
     {
         id: "2",
-        title: "Logan 7",
+        title: "Logan regresa 7",
         description: "Logan sufre porque perdió la batalla definitiva con Mirtha",
         price: 5400,
         img: "https://i.pinimg.com/originals/a7/37/df/a737dfaf12129b5dfe3d455dc0258cf2.jpg",

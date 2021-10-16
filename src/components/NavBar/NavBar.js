@@ -10,6 +10,7 @@ import Button from 'react-bootstrap/Button';
 import navLogo from '../../assets/librin.png';
 import { Link } from 'react-router-dom';
 import Dropdown from 'react-bootstrap/Dropdown'
+import WidgetCount from "./CartWidgetCounter";
 
 
 

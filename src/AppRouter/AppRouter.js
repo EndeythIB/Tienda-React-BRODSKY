@@ -12,7 +12,6 @@ import Cart from "../components/Cart/Cart";
 export default function AppRouter() {
     return (
         <BrowserRouter>
-            <Cart/>
             <NavBar/>
             <Switch>
                 <Route exact path="/contact" component={ContactPage}/>
