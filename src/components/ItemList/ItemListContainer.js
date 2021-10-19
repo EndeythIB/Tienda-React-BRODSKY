@@ -34,16 +34,7 @@ export const ItemListContainer = () => {
     getItems(db)
   },[catId])
 
-  // const categories = [
-  //   { id: 'asfadd', address: '/', text: 'TODOS LOS PRODUCTOS' },
-  //   { id: '123asf', address: '/category/terror', text: 'CATEGORIA A' },
-  //   { id: 'sgs3q3', address: '/category/comedia', text: 'CATEGORIA B' },
-  //   { id: 'gkl98s', address: '/category/drama', text: 'CATEGORIA C' },
-  //   { id: 'dwa648', address: '/category/suspenso', text: 'CATEGORIA D' },
-  // ];
-
-
-  // 
+ 
 
   return (
         <div id="catalog" className="div-catalog">
@@ -51,30 +42,5 @@ export const ItemListContainer = () => {
         </div>       
   ) 
 };
-
-
- // useEffect(() => {
-
-  //   const getItems = new Promise((resolve) => {
-  //     setTimeout(() => {
-  //       resolve(DataItem);
-  //     }, 0);
-  //   });
-
-
-  //   getItems.then((res) => {
-  //     catId 
-  //       ? setItems(res.filter((i) => i.category === catId))
-  //       : setItems(res);
-  //   });  
-  // }, [catId]);
-
-  // async function getItems(db) {
-  //   const itemsCol = collection(db, 'items');
-  //   const itemsSnapshot = await getDocs(itemsCol);
-  //   const itemsList = itemsSnapshot.docs.map(doc => doc.data());
-  //   console.log("lista items: ", itemsList)
-  //   setItems(itemsList)
-  //   return itemsList;
 
   

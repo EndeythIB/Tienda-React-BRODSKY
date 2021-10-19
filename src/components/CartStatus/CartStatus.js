@@ -31,7 +31,7 @@ export default function CartStatus() {
                 <div className="CartPurchase">
                     <div className="Cart-Commands" style={{display:"flex", justifyContent:"space-between", padding:"10px 50px 10px 50px" }}>
                         <p>Total Items: {cantidadTotalCarrito()}</p>
-                        <p>Precio Total: {precioTotalCarrito()}</p>           
+                        <p>Precio Total: ${precioTotalCarrito()}</p>           
                         <Button onClick={clear}>Limpiar carrito</Button>
                         <Button>Finalizar Compra</Button>
                     </div>
