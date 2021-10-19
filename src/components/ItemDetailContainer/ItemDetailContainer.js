@@ -5,6 +5,8 @@ import Spinner from 'react-bootstrap/Spinner'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { DataItem } from "../../ItemData/ItemData";
 import { useParams } from "react-router";
+import db from '../../firebase';
+import { getFirestore, collection, getDocs, doc, query, where } from 'firebase/firestore';
 
 
 
@@ -13,26 +15,27 @@ export default function ItemDetailContainer() {
     const { idItem } = useParams();
     const [loader, setLoader] = useState(true);
 
-    useEffect (() => {
+    async function getItemsInfo(db) {
+        setLoader(true);
+        let itemsInfoCol = idItem
+         ? query(
+              collection(db, "ItemCollection"),
+              where("id", "==", Number(idItem))
+           )
+         : collection(db, "ItemCollection");
+      const itemsInfoSnapshot = await getDocs(itemsInfoCol);
+      const listaInfoItem = itemsInfoSnapshot.docs.map(doc => doc.data());
+      console.log("lista info items: ", listaInfoItem)
+      setLoader(false);
+      return setItemInfo(listaInfoItem)
 
-    setLoader(true);
-    const getItem = new Promise ((resolve) => {
-        setTimeout(() => {
-            resolve(DataItem)
-        }, 2000)
-    })
+    }
 
-    
-    getItem.then((res)=> {
-        idItem
-            ? setItemInfo(res.filter((i) => i.id === idItem))
-            : setItemInfo(res);
-    })
-    .finally(() => setLoader(false));
-    
-    }, [idItem])
-
-    console.log(idItem)
+      useEffect(()=>{
+        
+        getItemsInfo(db)
+        
+      },[idItem])
 
     return (
         <>
