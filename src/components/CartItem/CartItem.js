@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card'
 import Button from "react-bootstrap/Button";
 import './CartItem.css';
+import { ToastContainer, toast } from "react-toastify";
 
 
 export default function CartItem(props) {
@@ -23,53 +24,10 @@ export default function CartItem(props) {
                     </Card.Text>
                 </Card.Body>
                 <Card.Body>
-                    <Button onClick={() => deleteItem(props.item.id)} style={{marginTop: "30px"}} variant="primary">X</Button>
+                    <Button className="trashBTN" onClick={() => deleteItem(props.item.id)} style={{marginTop: "30px"}} variant="outline-light">🗑️</Button>
+                    <ToastContainer autoClose={2000}/>
                 </Card.Body>
             </Card>
-
-            {/* <img src={props.item.img}></img>
-            <p>{props.item.price}</p>
-            <h3>{props.item.title}</h3> */}
-
-
-
-
-            {/* <div>
-                {cart.map(item => <>
-                <div>
-                    {item.title}
-                    <CartItem/>
-                    {/* <ItemCarrito item={item} /> */}
-                {/* </div>
-                </>)}
-            </div> */}
-
-
-            {/* <div className="detail-wrapper">
-                <div className="detail-img">
-                    <img src={props.data[0]?.img}></img>
-                    <img src={props.data[0]?.img}></img>
-                    <img src={props.data[0]?.img}></img>
-                </div>
-                <div className="detail-description">
-                    <h2>{props.data[0]?.title}</h2>
-                    <p>{props.data[0]?.description}</p>
-                    <p>{"$" + props.data[0]?.price}</p>
-                    {show?<div className="contador">{<ItemCount/>}</div>:null}                
-                    <br></br>
-
-                    {show?<div className="d-grid gap-2">
-                        <Button onClick={addCarrito} variant="outline-danger">Agregar al carrito</Button>
-                    </div>:null}
-                    {showCart?<div className="d-grid gap-2">
-                        <p style={{ color: "red" }}>Gracias por su compra, vuelvas prontos!</p>
-                    </div>:null}
-                    {showCart?<div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }} className="d-grid gap-2">
-                        <Link to="/"><Button variant="outline-danger">Volver a Inicio</Button></Link>
-                        <Link to="/cart"><Button variant="outline-danger">Ir al Carrito 🛒</Button></Link>
-                    </div>:null}
-                </div>
-            </div> */}
         </div>
     )
 }

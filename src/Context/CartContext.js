@@ -1,11 +1,11 @@
 import React, { useState, createContext } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export const CartContext = createContext();
 
 export const CartProvider = (props) => {
   const [cart, setCart] = useState([]);
-
-  console.log("ESTE ES EL CARRITO", cart);
 
   const addItem = (item, count) => {
     const newItem = { ...item, contador: count };
@@ -24,25 +24,17 @@ export const CartProvider = (props) => {
   };
 
   const deleteItem = (id) => {
-  //      deleteItem.props.data[0]
-  //      deleteItem.props.data[0].id
       const remItem= cart.filter(el => el.id !== id);
       setCart([...remItem]);
+      notifySucces('Item eliminado de tu carrito')
   }
-
-  // const deleteItem = (item) => {
-  //   if (isInCart(item)) {
-  //     const remItem = cart.filter(element => element.id !== item.id) || []
-  //     setCart([...remItem])
-  //   } 
-  // }
+  
+  const notifySucces = (text) => toast.success(text);
+  const notifyError = (text) => toast.error(text);
 
   const clear = () => {
     return setCart([])
   }
-
-  //reduce -->
-  //cart.reduce(()=> (a,b,0))
 
   const precioTotalCarrito = () =>
     cart.reduce(
@@ -61,7 +53,7 @@ export const CartProvider = (props) => {
     console.log("TOTAL",precioTotalCarrito())
 
   return (
-    <CartContext.Provider value={{ cart, setCart, addItem, precioTotalCarrito, cantidadTotalCarrito, deleteItem, clear }}>
+    <CartContext.Provider value={{ cart, setCart, addItem, precioTotalCarrito, cantidadTotalCarrito, deleteItem, clear, notifyError, notifySucces }}>
       {props.children}
     </CartContext.Provider>
   );

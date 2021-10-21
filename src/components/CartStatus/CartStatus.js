@@ -4,11 +4,40 @@ import {CartContext} from "../../Context/CartContext";
 import CartItem from "../CartItem/CartItem";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from "react-bootstrap/Button";
+import { ToastContainer, toast } from "react-toastify";
 import './CartStatus.css'
 
+//firebase
+import db from '../../firebase';
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
+
 export default function CartStatus() {
-    const {cart, clear, precioTotalCarrito, cantidadTotalCarrito, deleteItem} = useContext(CartContext);
+    const {cart, clear, precioTotalCarrito, cantidadTotalCarrito, deleteItem, notifySucces} = useContext(CartContext);
     const cartLenght = cart?.length
+
+    const newPurchase = {
+        buyer: {
+            name: "Isaac",
+            email: "isaac@i.com",
+            phone: "123456789",
+        },
+        items : cart,
+        total : ("$" + precioTotalCarrito())
+    }
+
+    const endPurchase = () => {
+        console.log("compra: ", newPurchase)
+        pushOrderFirebase(newPurchase)
+        
+
+    }
+
+    const pushOrderFirebase = async (newPurchase) => {
+        const purchaseFirebase = collection(db, 'Orders');
+        const order = await addDoc(purchaseFirebase, newPurchase);
+        console.log("se genero order con id: ", order.id)
+        notifySucces('Felicidades por tu compra! tu ID de orden es: ' + order.id);
+    }
     
 
     if (cartLenght === 0) {
@@ -32,21 +61,22 @@ export default function CartStatus() {
                     <div className="Cart-Commands" style={{display:"flex", justifyContent:"space-between", padding:"10px 50px 10px 50px" }}>
                         <p>Total Items: {cantidadTotalCarrito()}</p>
                         <p>Precio Total: ${precioTotalCarrito()}</p>           
-                        <Button onClick={clear}>Limpiar carrito</Button>
-                        <Button>Finalizar Compra</Button>
+                        <Button onClick={clear} variant="outline-light" >Limpiar carrito</Button>
+                        <Button onClick={endPurchase} variant="outline-light" >Finalizar Compra</Button>
                     </div>
 
                     <div>
                         {cart.map(item => <>
                             <div>
-                                {/* {item.title} */}
                                 {<CartItem item={item}/>}
-                                {/* <ItemCarrito item={item} /> */}
+                                <ToastContainer autoClose={3000} />
                             </div>
                         </>)}
                     </div>
                     
                 </div>
+
+
 
         
             </div>

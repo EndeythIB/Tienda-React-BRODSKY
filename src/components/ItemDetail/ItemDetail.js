@@ -5,6 +5,7 @@ import ItemCount from "../ItemCount/ItemCount";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './ItemDetail.css';
 import { CartContext } from "../../Context/CartContext";
+import { ToastContainer } from "react-toastify";
 
 
 export default function ItemDetail(props) {
@@ -12,7 +13,7 @@ export default function ItemDetail(props) {
     const stock = (props.data[0]?.stock);
     const [show, setShow] = useState(true)
     const [showCart, setShowCart] = useState(false)
-    const {cart, addItem} = useContext(CartContext);
+    const {cart, addItem, notifyError, notifySucces} = useContext(CartContext);
 
     const addOne = () => {counter < stock && setCounter(counter + 1)}
 
@@ -23,12 +24,13 @@ export default function ItemDetail(props) {
             setShow(false)
             setShowCart(true)
             const itemCarrito = props.data[0]
+            
 
             addItem(itemCarrito, counter)
-            console.log(itemCarrito);
+            
 
         }else {
-            alert("debes agregar al menos 1 item");
+            notifyError('debes agregar al menos un item!')
         }
     }
 
@@ -50,6 +52,7 @@ export default function ItemDetail(props) {
 
                 {show?<div className="d-grid gap-2">
                     <Button onClick={addCarrito} variant="outline-danger">Agregar al carrito</Button>
+                    <ToastContainer autoClose={2000} />
                 </div>:null}
                 {showCart?<div className="d-grid gap-2">
                     <p style={{ color: "red" }}>Gracias por su compra, vuelvas prontos!</p>

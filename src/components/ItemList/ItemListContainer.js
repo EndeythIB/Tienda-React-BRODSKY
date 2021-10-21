@@ -19,9 +19,7 @@ export const ItemListContainer = () => {
            )
          : collection(db, "ItemCollection");
       const itemsSnapshot = await getDocs(itemsCol);
-      console.log("itemSnapshot: ", itemsSnapshot);
       const listaItem = itemsSnapshot.docs.map(doc => doc.data());
-      console.log("lista items: ", listaItem)
       return setItems(listaItem)
       
       

@@ -25,7 +25,6 @@ export default function ItemDetailContainer() {
          : collection(db, "ItemCollection");
       const itemsInfoSnapshot = await getDocs(itemsInfoCol);
       const listaInfoItem = itemsInfoSnapshot.docs.map(doc => doc.data());
-      console.log("lista info items: ", listaInfoItem)
       setLoader(false);
       return setItemInfo(listaInfoItem)
 
