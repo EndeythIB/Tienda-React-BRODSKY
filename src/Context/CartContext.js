@@ -26,7 +26,7 @@ export const CartProvider = (props) => {
   const deleteItem = (id) => {
       const remItem= cart.filter(el => el.id !== id);
       setCart([...remItem]);
-      notifySucces('Item eliminado de tu carrito')
+      notifyError('Item eliminado de tu carrito');
   }
   
   const notifySucces = (text) => toast.success(text);

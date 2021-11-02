@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from "react-bootstrap/Button";
 import { ToastContainer, toast } from "react-toastify";
 import './CartStatus.css'
+import ModalCompra from "./ModalPurchase"
 
 //firebase
 import db from '../../firebase';
@@ -14,6 +15,7 @@ import { getFirestore, collection, addDoc } from 'firebase/firestore';
 export default function CartStatus() {
     const {cart, clear, precioTotalCarrito, cantidadTotalCarrito, deleteItem, notifySucces} = useContext(CartContext);
     const cartLenght = cart?.length
+    const [modalShow, setModalShow] = React.useState(false);
 
     const newPurchase = {
         buyer: {
@@ -62,7 +64,8 @@ export default function CartStatus() {
                         <p>Total Items: {cantidadTotalCarrito()}</p>
                         <p>Precio Total: ${precioTotalCarrito()}</p>           
                         <Button onClick={clear} variant="outline-light" >Limpiar carrito</Button>
-                        <Button onClick={endPurchase} variant="outline-light" >Finalizar Compra</Button>
+                        <Button onClick={() => setModalShow(true)} variant="outline-light" >Finalizar Compra</Button>
+                        
                     </div>
 
                     <div>
@@ -70,6 +73,7 @@ export default function CartStatus() {
                             <div>
                                 {<CartItem item={item}/>}
                                 <ToastContainer autoClose={3000} />
+                                {<ModalCompra item={item} show={modalShow} onHide={() => setModalShow(false)} />}
                             </div>
                         </>)}
                     </div>

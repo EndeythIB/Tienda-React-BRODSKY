@@ -4,17 +4,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card'
 import Button from "react-bootstrap/Button";
 import './CartItem.css';
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 
 
 export default function CartItem(props) {
-    const {setCart, deleteItem} = useContext(CartContext);
+    const {deleteItem} = useContext(CartContext);
 
 
     return(
         <div className="cart-item" style={{}}>
             <Card className="cart-card">
-                <Card.Header className="card-header"><img src={props.item.img} alt=""></img></Card.Header>
+                <Card.Img className="card-img" variant="" src={props.item.img} />
                 <Card.Body>
                     <Card.Title>{props.item.title}</Card.Title>
                     <Card.Text style={{display:"grid", gridTemplateColumns:"1fr 1fr 1fr", paddingTop: "20px"}}>
@@ -25,7 +25,6 @@ export default function CartItem(props) {
                 </Card.Body>
                 <Card.Body>
                     <Button className="trashBTN" onClick={() => deleteItem(props.item.id)} style={{marginTop: "30px"}} variant="outline-light">🗑️</Button>
-                    <ToastContainer autoClose={2000}/>
                 </Card.Body>
             </Card>
         </div>
