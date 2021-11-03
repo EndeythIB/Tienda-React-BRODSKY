@@ -1,5 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 Link {
   text-decoration: none;
@@ -14,13 +13,11 @@ Link {
   float: left;
 }
 
-
 @media (prefers-reduced-motion: no-preference) {
   .logo-img {
     animation: logo-img-spin infinite 10s linear;
   }
 }
-
 
 @keyframes logo-img-spin {
   from {
@@ -30,7 +27,6 @@ Link {
     transform: rotate(360deg);
   }
 }
-
 
 .nav-buttons {
   list-style: none;
@@ -42,11 +38,11 @@ Link {
   text-decoration: none;
   color: white;
   font-size: 15px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
-.btn-nav:focus,.btn-nav:active {
+.btn-nav:focus,
+.btn-nav:active {
   outline: none;
   box-shadow: none;
 }
-

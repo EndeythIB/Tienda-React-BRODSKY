@@ -1,7 +1,11 @@
 import React from "react";
+
+//StyleSheet
+import "./ItemCount.css";
+
+//External Components
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from "react-bootstrap/Button";
-import "./ItemCount.css";
 
 const ItemCount = (props) => {
 

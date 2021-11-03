@@ -1,61 +1,60 @@
 .Home {
-    text-align: center;
-  }
-  
-  .Home-logo {
-    height: 40vmin;
-    pointer-events: none;
-  }
-  
-  @media (prefers-reduced-motion: no-preference) {
-    .Home-logo {
-      animation: Home-logo-spin infinite 20s linear;
-    }
-  }
-  
-  .Home-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
-  
-  .Home-link {
-    color: #61dafb;
-  }
-  
-  @keyframes Home-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
+  text-align: center;
+}
 
-  .down-button {
-    margin-top: 50px;
+.Home-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Home-logo {
+    animation: Home-logo-spin infinite 20s linear;
   }
-  
-  .div-catalog .items {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-top: 50px;
-    
+}
+
+.Home-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Home-link {
+  color: #61dafb;
+}
+
+@keyframes Home-logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-  
-  .div-catalog .items .card {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50px;
-    transition:  0.3s ease;
-    cursor: pointer;
+  to {
+    transform: rotate(360deg);
   }
-  
-  .div-catalog .items .card:hover {
-    transform: scale(1.05);
-  }
+}
+
+.down-button {
+  margin-top: 50px;
+}
+
+.div-catalog .items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 50px;
+}
+
+.div-catalog .items .card {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.div-catalog .items .card:hover {
+  transform: scale(1.05);
+}

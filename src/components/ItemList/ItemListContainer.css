@@ -1,18 +1,17 @@
 .div-catalog .items {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 50px;
-    
-  }
-  
-  .div-catalog .items .card {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50px;
-    transition:  0.3s ease;
-    cursor: pointer;
-  }
-  
-  .div-catalog .items .card:hover {
-    transform: scale(1.05);
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 50px;
+}
+
+.div-catalog .items .card {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.div-catalog .items .card:hover {
+  transform: scale(1.05);
+}
