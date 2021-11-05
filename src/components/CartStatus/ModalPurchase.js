@@ -83,7 +83,7 @@ export default function ModalCompra(props) {
     }
 
     notifySucces(<div>Felicidades por tu compra! <br></br> Tu ID de orden es: <br></br> {order.id} <br></br> <br></br> <Button variant="outline-light"
-    style={{color: "black", boxShadow: "0px 1px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)"}} onClick={copyToClipboard}>Copy ID</Button> <br></br> <br></br> Seras redireccionado al inicio en 10 segundos</div>);
+    style={{color: "black", boxShadow: "0px 1px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)"}} onClick={copyToClipboard}>Copiar ID</Button> <br></br> <br></br> Seras redireccionado al inicio en 10 segundos</div>);
     props.setModalShow(false);
     setTimeout( () => {
       clear()
