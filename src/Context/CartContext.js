@@ -33,6 +33,7 @@ export const CartProvider = (props) => {
 
   const notifySucces = (text) => toast.success(text);
   const notifyError = (text) => toast.error(text);
+  const notifyCopy = (text) => toast.info ('Copiado correctamente!', {position: "bottom-right", autoClose: 1500, hideProgressBar: true,  loseOnClick: false, pauseOnHover: false, draggable: true, progress: undefined});
 
   const clear = () => {
     return setCart([]);
@@ -65,6 +66,7 @@ export const CartProvider = (props) => {
         clear,
         notifyError,
         notifySucces,
+        notifyCopy,
       }}
     >
       {props.children}

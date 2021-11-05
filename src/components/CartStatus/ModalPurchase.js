@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { useHistory } from "react-router-dom";
 import { CartContext } from "../../Context/CartContext";
 
 //Components
@@ -15,18 +16,20 @@ import db from "../../firebase";
 import { collection, addDoc } from "firebase/firestore";
 
 export default function ModalCompra(props) {
-  const { cart, precioTotalCarrito, notifySucces, notifyError } =
+  const { cart, precioTotalCarrito, notifySucces, notifyError, notifyCopy , clear} =
     useContext(CartContext);
+  const history = useHistory()
 
   const [newPurchase, setNewPurchase] = useState({
     name: "",
     mail: "",
     phone: "",
     items: cart,
+    mailConf: "",
     total: "$" + precioTotalCarrito(),
   });
 
-  const { name, mail, phone } = newPurchase;
+  const { name, mail, phone, mailConf } = newPurchase;
 
   const eventHandler = (e) => {
     setNewPurchase({
@@ -34,9 +37,24 @@ export default function ModalCompra(props) {
       [e.target.name]: e.target.value,
     });
   };
+
+  const redirect = () => {
+    history.push("/")
+  }
+  
   const validatePurchase = (purchase) => {
-    if (name.trim() === "" || mail.trim() === "" || phone.trim() === "") {
+    if (name.trim() === "" || mail.trim() === "" || phone.trim() === "" || mailConf.trim() === "") {
       notifyError("Debes completar todos los campos");
+      return;
+    }
+
+    if (!mail.includes("@") || !mail.includes(".")) {
+      notifyError("Debes introducir un email válido");
+      return;
+    }
+
+    if (mail !== mailConf) {
+      notifyError("Los e-mails deben coincidir.");
       return;
     }
     endPurchase();
@@ -47,15 +65,38 @@ export default function ModalCompra(props) {
     pushOrderFirebase(newPurchase);
   };
 
+  // const copyToClipboard = () => {
+  //   navigator.clipboard.writeText(order.id);
+  //   notifySucces("copiado correctamente");
+  // }
+
+  // onClick={() =>  navigator.clipboard.writeText(order.id)}
+
   const pushOrderFirebase = async (newPurchase) => {
     const purchaseFirebase = collection(db, "Orders");
     const order = await addDoc(purchaseFirebase, newPurchase);
     console.log("se genero order con id: ", order.id);
-    notifySucces("Felicidades por tu compra! tu ID de orden es: " + order.id);
+
+    const copyToClipboard = () => {
+      navigator.clipboard.writeText(order.id);
+      notifyCopy();
+    }
+
+    notifySucces(<div>Felicidades por tu compra! <br></br> Tu ID de orden es: <br></br> {order.id} <br></br> <br></br> <Button variant="outline-light"
+    style={{color: "black", boxShadow: "0px 1px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)"}} onClick={copyToClipboard}>Copy ID</Button> <br></br> <br></br> Seras redireccionado al inicio en 10 segundos</div>);
+    props.setModalShow(false);
+    setTimeout( () => {
+      clear()
+      redirect()
+    }, 15000)
+    
+
+    
   };
 
   return (
     <Modal
+      scrollable={true}
       {...props}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
@@ -117,6 +158,19 @@ export default function ModalCompra(props) {
                   variant="standard"
                   id="PurchaseEmail"
                   name="mail"
+                  type="email"
+                />
+              </li>
+              <li>
+                <TextField
+                  style={{ marginTop: "15px", width: "80%" }}
+                  fullWidth
+                  onChange={eventHandler}
+                  id="standard-basic"
+                  label="Confirma Email"
+                  variant="standard"
+                  id="PurchaseEmail"
+                  name="mailConf"
                   type="email"
                 />
               </li>
