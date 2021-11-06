@@ -28,6 +28,11 @@ Como habiamos comentado anteriormente se trata de una libreria virtual, los usua
 
 [![Product Name Screen Shot][product-USE]](https://ibb.co/Gt7yYYb)
 
+<!-- PROCESO COMPRA -->
+## PROCESO DE COMPRA
+
+[![Product Name Screen Shot][product-BUY]](https://ibb.co/Gt7yYYb)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -75,3 +80,4 @@ Project Link: [https://github.com/EndeythIB/Tienda-React-BRODSKY]
 <!-- IMAGENES Y MARKDOWNS -->
 [product-screenshot]: ./src/assets/InicioLibrito.gif
 [product-USE]: ./src/assets/UsoLibrito.gif
+[product-BUY]: ./src/assets/BUYLibrito.gif
