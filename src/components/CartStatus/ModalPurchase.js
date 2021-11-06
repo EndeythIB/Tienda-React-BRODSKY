@@ -88,7 +88,7 @@ export default function ModalCompra(props) {
     setTimeout( () => {
       clear()
       redirect()
-    }, 15000)
+    }, 12000)
     
 
     

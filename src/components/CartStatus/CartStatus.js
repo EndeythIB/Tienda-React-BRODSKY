@@ -78,7 +78,7 @@ export default function CartStatus() {
                 </div>
               </>
             ))}
-            <ToastContainer autoClose={10000} closeOnClick={false} />
+            <ToastContainer autoClose={9000} closeOnClick={false} />
           </div>
         </div>
       </div>
