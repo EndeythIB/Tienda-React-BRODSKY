@@ -84,7 +84,7 @@ export default function ModalCompra(props) {
 
     notifySucces(<div>Felicidades por tu compra! <br></br> Tu ID de orden es: <br></br> {order.id} <br></br> <br></br> <Button variant="outline-light"
     style={{color: "black", boxShadow: "0px 1px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)"}} onClick={copyToClipboard}>Copiar ID</Button> <br></br> <br></br> Seras redireccionado al inicio en 10 segundos</div>);
-    props.setModalShow(false);
+    props.onHide();
     setTimeout( () => {
       clear()
       redirect()
@@ -111,9 +111,8 @@ export default function ModalCompra(props) {
         <div style={{border: "1px solid rgba(0,0,0,.125)", boxShadow: "0px 1px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)",}}>
 
           {cart.map((item) => (
-            <>
-              <div>{<ItemsModal item={item} />}</div>
-            </>
+              <div key={item.id}>{<ItemsModal item={item}/>}</div>
+
           ))}
 
         </div>
@@ -141,10 +140,8 @@ export default function ModalCompra(props) {
                 <TextField
                   style={{ marginTop: "15px", width: "80%" }}
                   onChange={eventHandler}
-                  id="standard-basic"
                   label="Nombre"
                   variant="standard"
-                  id="PurchaseName"
                   name="name"
                 />
               </li>
@@ -153,10 +150,8 @@ export default function ModalCompra(props) {
                   style={{ marginTop: "15px", width: "80%" }}
                   fullWidth
                   onChange={eventHandler}
-                  id="standard-basic"
                   label="Email"
                   variant="standard"
-                  id="PurchaseEmail"
                   name="mail"
                   type="email"
                 />
@@ -166,10 +161,8 @@ export default function ModalCompra(props) {
                   style={{ marginTop: "15px", width: "80%" }}
                   fullWidth
                   onChange={eventHandler}
-                  id="standard-basic"
                   label="Confirma Email"
                   variant="standard"
-                  id="PurchaseEmail"
                   name="mailConf"
                   type="email"
                 />
@@ -179,10 +172,8 @@ export default function ModalCompra(props) {
                   style={{ marginTop: "15px", width: "80%" }}
                   fullWidth
                   onChange={eventHandler}
-                  id="standard-basic"
                   label="Teléfono"
                   variant="standard"
-                  id="PurchasePhone"
                   name="phone"
                   type="phone"
                 />

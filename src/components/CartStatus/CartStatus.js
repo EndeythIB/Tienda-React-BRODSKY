@@ -64,19 +64,16 @@ export default function CartStatus() {
 
           <div>
             {cart.map((item) => (
-              <>
-                <div>
-                  {<CartItem item={item} />}                  
+                <div key={item.id}>
+                  {<CartItem item={item}/>}                  
                   {
                     <ModalCompra
-                      item={item}
-                      show={modalShow}
-                      onHide={() => setModalShow(false)}
-                      setModalShow={setModalShow}
-                    />
+                    item={item}
+                    show={modalShow}
+                    onHide={() => setModalShow(false)}
+                  />
                   }
                 </div>
-              </>
             ))}
             <ToastContainer autoClose={9000} closeOnClick={false} />
           </div>

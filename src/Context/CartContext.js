@@ -52,7 +52,6 @@ export const CartProvider = (props) => {
       0
     );
 
-  console.log("TOTAL", precioTotalCarrito());
 
   return (
     <CartContext.Provider

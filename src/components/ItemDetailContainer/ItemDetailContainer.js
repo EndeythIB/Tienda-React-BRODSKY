@@ -16,25 +16,24 @@ import db from "../../firebase";
 export default function ItemDetailContainer() {
   const [itemInfo, setItemInfo] = useState([]);
   const { idItem } = useParams();
-  const [loader, setLoader] = useState(true);
-
-  async function getItemsInfo(db) {
-    setLoader(true);
-    let itemsInfoCol = idItem
-      ? query(
-          collection(db, "ItemCollection"),
-          where("id", "==", Number(idItem))
-        )
-      : collection(db, "ItemCollection");
-    const itemsInfoSnapshot = await getDocs(itemsInfoCol);
-    const listaInfoItem = itemsInfoSnapshot.docs.map((doc) => doc.data());
-    setLoader(false);
-    return setItemInfo(listaInfoItem);
-  }
+  const [loader, setLoader] = useState(true);  
 
   useEffect(() => {
+    async function getItemsInfo(db) {
+       setLoader(true);
+       let itemsInfoCol = idItem
+          ? query(
+               collection(db, "ItemCollection"),
+               where("id", "==", Number(idItem))
+            )
+          : collection(db, "ItemCollection");
+       const itemsInfoSnapshot = await getDocs(itemsInfoCol);
+       const listaInfoItem = itemsInfoSnapshot.docs.map((doc) => doc.data());
+       setLoader(false);
+       return setItemInfo(listaInfoItem);
+    }
     getItemsInfo(db);
-  }, [idItem]);
+ }, [idItem]);
 
   return (
     <>

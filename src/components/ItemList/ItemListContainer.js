@@ -10,16 +10,17 @@ export const ItemListContainer = () => {
   const [ItemCollection, setItems] = useState([]);
   const { catId } = useParams();
 
-  async function getItems(db) {
-    let itemsCol = catId
-      ? query(collection(db, "ItemCollection"), where("category", "==", catId))
-      : collection(db, "ItemCollection");
-    const itemsSnapshot = await getDocs(itemsCol);
-    const listaItem = itemsSnapshot.docs.map((doc) => doc.data());
-    return setItems(listaItem);
-  }
+  
 
   useEffect(() => {
+    async function getItems(db) {
+      let itemsCol = catId
+        ? query(collection(db, "ItemCollection"), where("category", "==", catId))
+        : collection(db, "ItemCollection");
+      const itemsSnapshot = await getDocs(itemsCol);
+      const listaItem = itemsSnapshot.docs.map((doc) => doc.data());
+      return setItems(listaItem);
+    }
     getItems(db);
   }, [catId]);
 

@@ -25,9 +25,9 @@ export default function CartItem(props) {
               paddingTop: "20px",
             }}
           >
-            <div>precio: ${props.item.price} c/u</div>
-            <div>cantidad: {props.item.contador}</div>
-            <div>total: ${props.item.contador * props.item.price}</div>
+            <span>precio: ${props.item.price} c/u</span>
+            <span>cantidad: {props.item.contador}</span>
+            <span>total: ${props.item.contador * props.item.price}</span>
           </Card.Text>
         </Card.Body>
         <Card.Body>
